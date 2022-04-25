@@ -53,7 +53,7 @@ describe("TokenPermit Test", function () {
     const { v, r, s } = splitSignature(signature);
     await tokenPermit
       .connect(spender)
-      .permitWithSignature(
+      .permitWithTransfer(
         ownerAddr,
         spenderAddr,
         100,
